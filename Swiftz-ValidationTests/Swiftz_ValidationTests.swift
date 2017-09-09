@@ -13,28 +13,33 @@ class Swiftz_ValidationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testApplicative() {
         
-        let validation = Validation<String, Int>.Success(3)
-        let validation4 = validation.fmap { $0 + 1}
-        XCTAssert(validation4.success == 4)
+        let validation3 = Validation<String, Int>.pure(3)
+        let validationAdd2 = Validation<String, (Int) -> Int>.pure({$0 + 2})
+        let validation5 = validation3.ap(validationAdd2)
+        XCTAssert(validation5.success == 5)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testAppliativeLiftA(){
+        let add2 = { $0 + 2 }
+        let validation3 = Validation<String, Int>.pure(3)
+        let validation5 = Validation.liftA(add2) (validation3)
+        XCTAssert(validation5.success == 5)
     }
+    
+    func testAppliativeLiftAFailure(){
+        let add2 = { $0 + 2 }
+        let validation3 = Validation<String, Int>.Failure("Error")
+        let validation5 = Validation.liftA(add2) (validation3)
+        XCTAssert(validation5.success == nil && validation5.failure == "Error")
+    }
+    
     
 }
