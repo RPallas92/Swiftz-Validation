@@ -7,15 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		411FACC21F641D2200536F14 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411FACC11F641D2200536F14 /* Semigroup.swift */; };
 		41FDF1E31F63F54C00983DAB /* SwiftzValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FDF1D91F63F54C00983DAB /* SwiftzValidation.framework */; };
 		41FDF1E81F63F54C00983DAB /* Swiftz_ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF1E71F63F54C00983DAB /* Swiftz_ValidationTests.swift */; };
 		41FDF1EA1F63F54C00983DAB /* Swiftz-Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41FDF1F41F63F56B00983DAB /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF1F31F63F56B00983DAB /* Validation.swift */; };
-		41FDF2361F63FB3B00983DAB /* Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF2351F63FB3B00983DAB /* Functor.swift */; };
-		41FDF2381F63FC0900983DAB /* Kinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF2371F63FC0900983DAB /* Kinds.swift */; };
-		41FDF23A1F63FDEC00983DAB /* Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF2391F63FDEC00983DAB /* Applicative.swift */; };
-		41FDF23C1F63FE1000983DAB /* Pointed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF23B1F63FE1000983DAB /* Pointed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +36,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		411FACC11F641D2200536F14 /* Semigroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
 		41FDF1D91F63F54C00983DAB /* SwiftzValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftzValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiftz-Validation.h"; sourceTree = "<group>"; };
 		41FDF1DD1F63F54C00983DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,10 +43,6 @@
 		41FDF1E71F63F54C00983DAB /* Swiftz_ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftz_ValidationTests.swift; sourceTree = "<group>"; };
 		41FDF1E91F63F54C00983DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FDF1F31F63F56B00983DAB /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		41FDF2351F63FB3B00983DAB /* Functor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functor.swift; sourceTree = "<group>"; };
-		41FDF2371F63FC0900983DAB /* Kinds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kinds.swift; sourceTree = "<group>"; };
-		41FDF2391F63FDEC00983DAB /* Applicative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Applicative.swift; sourceTree = "<group>"; };
-		41FDF23B1F63FE1000983DAB /* Pointed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pointed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +85,6 @@
 		41FDF1DB1F63F54C00983DAB /* Swiftz-Validation */ = {
 			isa = PBXGroup;
 			children = (
-				41FDF2371F63FC0900983DAB /* Kinds.swift */,
-				41FDF2331F63FA4200983DAB /* data */,
-				41FDF2341F63FA4200983DAB /* control */,
 				41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */,
 				41FDF1DD1F63F54C00983DAB /* Info.plist */,
 				41FDF1F31F63F56B00983DAB /* Validation.swift */,
@@ -112,24 +99,6 @@
 				41FDF1E91F63F54C00983DAB /* Info.plist */,
 			);
 			path = "Swiftz-ValidationTests";
-			sourceTree = "<group>";
-		};
-		41FDF2331F63FA4200983DAB /* data */ = {
-			isa = PBXGroup;
-			children = (
-				411FACC11F641D2200536F14 /* Semigroup.swift */,
-				41FDF2351F63FB3B00983DAB /* Functor.swift */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		41FDF2341F63FA4200983DAB /* control */ = {
-			isa = PBXGroup;
-			children = (
-				41FDF23B1F63FE1000983DAB /* Pointed.swift */,
-				41FDF2391F63FDEC00983DAB /* Applicative.swift */,
-			);
-			path = control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,12 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FDF23C1F63FE1000983DAB /* Pointed.swift in Sources */,
 				41FDF1F41F63F56B00983DAB /* Validation.swift in Sources */,
-				41FDF2361F63FB3B00983DAB /* Functor.swift in Sources */,
-				411FACC21F641D2200536F14 /* Semigroup.swift in Sources */,
-				41FDF23A1F63FDEC00983DAB /* Applicative.swift in Sources */,
-				41FDF2381F63FC0900983DAB /* Kinds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
