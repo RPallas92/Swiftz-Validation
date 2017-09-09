@@ -25,9 +25,9 @@ class Swiftz_ValidationTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let validation = Validation()
-        let result = validation.validate(value: "hack")
-        XCTAssert(result)
+        let validation = Validation<String, Int>.Success(3)
+        let validation4 = validation.fmap { $0 + 1}
+        XCTAssert(validation4.success == 4)
     }
     
     func testPerformanceExample() {
