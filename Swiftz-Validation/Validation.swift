@@ -44,3 +44,9 @@ extension Validation {  //Functor
         }
     }
 }
+
+extension Validation { //Pointed
+    public static func pure(_ x : R) -> Validation<L,R> {
+        return Validation.Success(x)
+    }
+}
