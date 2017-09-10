@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411FACC41F6595EF00536F14 /* Concatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411FACC31F6595EF00536F14 /* Concatable.swift */; };
 		41FDF1E31F63F54C00983DAB /* SwiftzValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FDF1D91F63F54C00983DAB /* SwiftzValidation.framework */; };
 		41FDF1E81F63F54C00983DAB /* Swiftz_ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDF1E71F63F54C00983DAB /* Swiftz_ValidationTests.swift */; };
 		41FDF1EA1F63F54C00983DAB /* Swiftz-Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		411FACC31F6595EF00536F14 /* Concatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concatable.swift; sourceTree = "<group>"; };
 		41FDF1D91F63F54C00983DAB /* SwiftzValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftzValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiftz-Validation.h"; sourceTree = "<group>"; };
 		41FDF1DD1F63F54C00983DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				41FDF1DC1F63F54C00983DAB /* Swiftz-Validation.h */,
 				41FDF1DD1F63F54C00983DAB /* Info.plist */,
 				41FDF1F31F63F56B00983DAB /* Validation.swift */,
+				411FACC31F6595EF00536F14 /* Concatable.swift */,
 			);
 			path = "Swiftz-Validation";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41FDF1F41F63F56B00983DAB /* Validation.swift in Sources */,
+				411FACC41F6595EF00536F14 /* Concatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
