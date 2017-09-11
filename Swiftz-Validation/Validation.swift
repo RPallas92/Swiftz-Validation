@@ -91,7 +91,7 @@ extension Validation where L:Concatable/*: Semigroup*/ {
     
     typealias FA = Validation<L,A>
     
-    func sconcat(other : FA) -> FA {
+    func sconcat(_ other : FA) -> FA {
         switch self {
         case .Success( _):
             return other
@@ -101,7 +101,6 @@ extension Validation where L:Concatable/*: Semigroup*/ {
                 return self
             case .Failure(let otherError):
                 return Validation<L,A>.Failure(error.concat(otherError))
-
             }
         }
     }
