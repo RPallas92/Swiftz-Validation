@@ -41,5 +41,34 @@ class Swiftz_ValidationTests: XCTestCase {
         XCTAssert(validation5.success == nil && validation5.failure == "Error")
     }
     
+    func testSemigroup(){
+        
+        func isPasswordLongEnough(_ password:String) -> Validation<[String], String> {
+            if password.characters.count < 8 {
+                return Validation.Failure(["Password must have more than 6 characters."])
+            } else {
+                return Validation.Success(password)
+            }
+        }
+        
+        func isPasswordStrongEnough(_ password:String) -> Validation<[String], String> {
+            if (password.range(of:"[\\W]", options: .regularExpression) != nil){
+                return Validation.Success(password)
+            } else {
+                return Validation.Failure(["Password must contain a special character."])
+            }
+        }
+        
+        func isPasswordValid(password:String) -> Validation<[String], String> {
+            return isPasswordLongEnough(password).
+        }
+        
+        let result = isPasswordValid(password: "Richi")
+        
+        XCTAssert(result.success == nil )
+
+        
+    }
+    
     
 }
