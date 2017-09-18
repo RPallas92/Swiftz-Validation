@@ -60,7 +60,9 @@ class Swiftz_ValidationTests: XCTestCase {
         }
         
         func isPasswordValid(password:String) -> Validation<[String], String> {
-            return isPasswordLongEnough(password).
+
+            return isPasswordLongEnough(password)
+            .sconcat(isPasswordStrongEnough(password))
         }
         
         let result = isPasswordValid(password: "Richi")
@@ -69,6 +71,5 @@ class Swiftz_ValidationTests: XCTestCase {
 
         
     }
-    
-    
 }
+

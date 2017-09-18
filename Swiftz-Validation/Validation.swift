@@ -86,3 +86,24 @@ extension Validation /*: ApplicativeOps*/ {
         }
     }
 }
+
+extension Validation where L:Concatable/*: Semigroup*/ {
+    
+    typealias FA = Validation<L,A>
+    
+    func sconcat(_ other : FA) -> FA {
+        switch self {
+        case .Success( _):
+            return other
+        case .Failure(let error):
+            switch other {
+            case .Success( _):
+                return self
+            case .Failure(let otherError):
+                return Validation<L,A>.Failure(error.concat(otherError))
+            }
+        }
+    }
+}
+
+
