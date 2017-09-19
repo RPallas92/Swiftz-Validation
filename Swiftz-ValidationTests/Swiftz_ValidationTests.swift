@@ -36,10 +36,20 @@ class Swiftz_ValidationTests: XCTestCase {
         }
     }
     
-    func isPasswordValid(password:String) -> Validation<[String], String> {
+    //Use case provided by Jesús López
+    func isDifferentUserPass(_ user:String, _ password:String) -> Validation<[String], String> {
+        if (user == password){
+            return Validation.Failure(["Username and password MUST be different."])
+        } else {
+            return Validation.Success(password)
+        }
+    }
+    
+    func isPasswordValid(user: String, password:String) -> Validation<[String], String> {
         
         return isPasswordLongEnough(password)
             .sconcat(isPasswordStrongEnough(password))
+            .sconcat(isDifferentUserPass(user, password))
     }
     
     
@@ -66,12 +76,12 @@ class Swiftz_ValidationTests: XCTestCase {
     }
     
     func testSemigroupFailure(){
-        let result = isPasswordValid(password: "Richi")
-        XCTAssert(result.success == nil && result.failure! == ["Password must have more than 8 characters.", "Password must contain a special character."])
+        let result = isPasswordValid(user: "Richi", password: "Richi")
+        XCTAssert(result.success == nil && result.failure! == ["Password must have more than 8 characters.", "Password must contain a special character.","Username and password MUST be different."])
     }
     
     func testSemigroupSuccess(){
-        let result = isPasswordValid(password: "Ricardo$")
+        let result = isPasswordValid(user:"Richi", password: "Ricardo$")
         XCTAssert(result.success == "Ricardo$" && result.failure == nil)
     }
 }
