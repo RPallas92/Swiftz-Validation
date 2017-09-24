@@ -3,6 +3,8 @@
 A data structure that typically models form validations, and other scenarios where you want to aggregate all failures, rather than short-circuit if an error happens (for which Swiftx's Either is better suited).
 A Validation may either be a Success(value), which contains a successful value, or a Failure(value), which contains an error.
 
+Docs: [Swiftz-Validation docs](https://medium.com/@PallasR/functional-data-validation-in-swift-2cf2c28d55cd)
+
 ## Example
 
 ```swift
